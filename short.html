@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 这两行是让视频在手机上完美全屏显示，没有白边 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>正在播放视频</title>
+    <style>
+        /* 这段代码把整个网页变成纯黑色，并且让视频居中占满屏幕 */
+        body { margin: 0; padding: 0; background-color: #000; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
+        video { max-width: 100%; max-height: 100%; width: 100%; height: auto; object-fit: contain; }
+    </style>
+</head>
+<body>
+
+    <!-- 核心播放器代码，把 src 里的链接换成你的视频链接即可 -->
+    <!-- controls: 显示播放/暂停按钮； playsinline/webkit-playsinline: 告诉微信不要乱弹全屏，乖乖在网页里播 -->
+    <video src="https://mate-1417647111.cos.ap-shanghai.myqcloud.com/V1_compressed.mp4" 
+           controls 
+           playsinline 
+           webkit-playsinline
+           preload="auto">
+        您的浏览器不支持播放该视频，请升级浏览器。
+    </video>
+
+</body>
+</html>
